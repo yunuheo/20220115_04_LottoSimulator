@@ -78,8 +78,26 @@ public class MainDrive {
 		
 		int[] winNumberArr =  { 2, 7, 15, 30, 35, 40 };
 		
-		
+//		등수 판정 하기.
 
+//		내번호 하나를 들고 => 당첨번호 비교 6회 반복. => 내 번호 6개에 대해서 통째로 반복. (for 중첩)
+//		배열의 내용물을 꺼내보는 for
+		
+//		맞춘 갯수를 기록변수
+		int correctCount = 0;
+		
+		for (int myNum : myNumberArr) {
+			for (int winNum : winNumberArr ) {
+				if (myNum == winNum) {
+					
+//					같은 숫자 하나 추가 발견!
+					correctCount++;
+					
+				}
+			}
+		}
+		System.out.println(correctCount + "개 맞춤!");
+		
 	}
 
 }
