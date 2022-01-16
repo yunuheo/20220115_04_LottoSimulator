@@ -26,13 +26,28 @@ public class MainDrive {
 				System.out.println(i+1+"번째 숫자 입력 : ");
 				
 //				숫자 입력받기.
-				int inpputNum = myScanner.nextInt();
+				int inputNum = myScanner.nextInt();
 				
 //				1. 1~45의 범위인가?
 				
-				boolean isRangeOk = (1 <= inpputNum) && (inpputNum <= 45);
+				boolean isRangeOk = (1 <= inpputNum) && (inputNum <= 45);
 				
 //				2. 이미 등록된 숫자가 아닌가? => 중복이 아닌가?
+				
+				boolean isDuplOk = true; //일단은 써도 된다고 전제 -> 중복임을 발견하면, 쓰면 안된다고 변경.
+				
+//				내 번호 목록을 돌아보다가 => 입력한 숫자와 같은게 있다면? => 이미 등록된 숫자. (중복) => 사용하면 안됌.
+				
+				for (int myNum : myNumberArr) {
+//					내 번호랑 입력번호가 같은가?
+					if (myNum == inputNum) {
+//						같은걸 발견! => 중복검사 통과 X.
+						isDuplOk = false;
+						
+//						더이상 검사할 필요 X
+						break;
+					}
+				}
 				
 //				1,2를 모두 통과하면 => 내 번호 배열에 등록 + 다음 숫자로 이동.
 				
@@ -40,7 +55,7 @@ public class MainDrive {
 //					검사를 통과한 상황.
 					
 //					내 번호 목록에 -> 입력한 숫자를 기록.
-					myNumberArr[i] = inpputNum;
+					myNumberArr[i] = inputNum;
 					
 //					무한반복 종료 -> 다음 숫자로 이동.
 					break;
