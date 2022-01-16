@@ -30,7 +30,7 @@ public class MainDrive {
 				
 //				1. 1~45의 범위인가?
 				
-				boolean isRangeOk = (1 <= inpputNum) && (inputNum <= 45);
+				boolean isRangeOk = (1 <= inputNum) && (inputNum <= 45);
 				
 //				2. 이미 등록된 숫자가 아닌가? => 중복이 아닌가?
 				
@@ -51,7 +51,7 @@ public class MainDrive {
 				
 //				1,2를 모두 통과하면 => 내 번호 배열에 등록 + 다음 숫자로 이동.
 				
-				if (isRangeOk) {
+				if (isRangeOk && isDuplOk) {
 //					검사를 통과한 상황.
 					
 //					내 번호 목록에 -> 입력한 숫자를 기록.
