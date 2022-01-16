@@ -98,6 +98,26 @@ public class MainDrive {
 		}
 		System.out.println(correctCount + "개 맞춤!");
 		
+//		맞춘 갯수에 따른 등수 출력
+		
+		if (correctCount == 6) {
+			System.out.println("1등");
+		}
+		else if (correctCount == 5) {
+//			보너스번호를 맞췄는지? 추가 검사 필요.
+			
+			System.out.println("임시 - 3등");
+		}
+		else if(correctCount == 4) {
+			System.out.println("4등");
+		}
+		else if(correctCount == 3) {
+			System.out.println("5등");
+		}
+		else {
+			System.out.println("낙첨");
+		}
+		
 	}
 
 }
