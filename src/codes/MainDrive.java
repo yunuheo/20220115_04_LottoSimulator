@@ -76,7 +76,30 @@ public class MainDrive {
 		
 //		당첨번호 6개 생성 => 임시로, 숫자 6개 고정.
 		
-		int[] winNumberArr =  { 2, 7, 15, 30, 35, 40 };
+//		int[] winNumberArr =  { 2, 7, 15, 30, 35, 40 };
+		
+//		실제로 랜덤 6개 생성 (당첨번호 뽑기)
+		
+		int[] winNumberArr = new int[6];
+//				6개의 랜덤 숫자.
+		
+		for (int i = 0; i < winNumberArr.length; i++) {
+
+//			랜덤도 사용가능한 수가 나올때까지 반복
+			
+			while (true) {
+				
+//				컴퓨터에게 1~45 랜덤 추출 요청.
+			
+//				Math.random()*45 + 1 => int로 강제변환 (소수점 버림) : 1 <= (정수)결과물*45+1 < 46 : 1~45
+				int randomNum = (int)(Math.random() * 45+  1);
+//				랜덤숫자를 중복검사 수행.
+				
+//				중복검사에 통과하면, 다음 숫자.
+				
+			}
+				
+		}
 		
 //		등수 판정 하기.
 
