@@ -121,6 +121,33 @@ public class MainDrive {
 				
 		}
 		
+//		당첨번호 6개는 뽑힌 상황.
+//		추가로 보너스번호도 뽑자. => 제대로 된 번호 하나가 나올때까지 반복.
+
+//		보너스번호를 저장할 변수.
+		int bonusNum = 0;
+		
+//		써도 되는 값이 나올때까지 무한반복
+		while (true) {
+			
+//			1~45의 랜덤값 추출
+			int randomNum = (int)(Math.random()*45 +1);
+			
+//			중복검사 수행.
+			boolean isDuplOk = true;
+			
+			for (int winNum : winNumberArr) {
+				if(winNum == randomNum) {
+					isDuplOk = false;
+					break;
+				}
+			}
+			if (isDuplOk) {
+//				보너스 번호로 지정.
+				bonusNum = randomNum;
+				break; //다음로직으로 이동.
+			}
+		}
 		
 //		당첨번호 오름차순 정렬 - Bubble sort
 //		동작속도는 느리지만, 코딩학가 편한 로직.
@@ -148,6 +175,9 @@ public class MainDrive {
 		for (int winNum : winNumberArr) {
 			System.out.println(winNum);
 		}
+		
+//		확인용 - 보너스번호는?
+		System.out.println("보너스 번호 : " + bonusNum);
 		
 //		등수 판정 하기.
 
