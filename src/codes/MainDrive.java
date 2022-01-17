@@ -207,7 +207,26 @@ public class MainDrive {
 		else if (correctCount == 5) {
 //			보너스번호를 맞췄는지? 추가 검사 필요.
 			
-			System.out.println("임시 - 3등");
+			boolean isBonusCorrect = false; //내 번호중 하나가 보너스번호라면 true로 변경.
+			
+			for (int myNum : myNumberArr) {
+				
+//				내 번호들을 = 보너스번호와 같은가?
+				if (myNum == bonusNum) {
+					
+					isBonusCorrect = true;
+					break;
+				}
+			}
+			
+//			보너스번호 맞춘 여부에 따른 등수 출력.
+			
+			if (isBonusCorrect) {
+				System.out.println("2등");
+			}
+			else {
+				System.out.println("3등");
+			}
 		}
 		else if(correctCount == 4) {
 			System.out.println("4등");
