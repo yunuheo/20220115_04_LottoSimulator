@@ -150,7 +150,7 @@ public class MainDrive {
 		}
 		
 //		당첨번호 오름차순 정렬 - Bubble sort
-//		동작속도는 느리지만, 코딩학가 편한 로직.
+//		동작속도는 느리지만, 코딩하기가 편한 로직.
 		
 		for (int i = 0; i < winNumberArr.length; i++) {
 //			j가 5인 경우 => j+1은 6임. => 배열 범위를 벗어남.
